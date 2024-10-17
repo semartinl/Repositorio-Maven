@@ -1,6 +1,13 @@
 package es.unex.aos.lab1.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Team {
+    @GeneratedValue
+    @Id
     private long id;
     
     private String name;
