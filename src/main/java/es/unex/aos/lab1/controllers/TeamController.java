@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import es.unex.aos.lab1.models.Player;
 import es.unex.aos.lab1.models.Team;
 import es.unex.aos.lab1.repository.TeamRepository;
 
@@ -28,6 +29,11 @@ public class TeamController {
         return teamRepository.findById(id).get();
     }
 
+    @GetMapping("/teams/players")
+    Player getPlayers(){
+
+        return teamRepository.findAll();
+    }
 
 }
 

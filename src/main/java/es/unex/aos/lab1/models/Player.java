@@ -11,6 +11,10 @@ public class Player {
     private long id;
     private  String name;
     private String posicion;
+    public Player(String string, String string2) {
+        this.name=string;
+        this.posicion=string2;
+    }
     public long getId() {
         return id;
     }

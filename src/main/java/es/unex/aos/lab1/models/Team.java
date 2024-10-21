@@ -26,6 +26,11 @@ public class Team {
     public Team() {
         //TODO Auto-generated constructor stub
     }
+    public Team(String string, String string2, Set<Player> set) {
+        this.name = string;
+        this.location = string2;
+        this.players=set;
+    }
     public long getId() {
         return id;
     }
