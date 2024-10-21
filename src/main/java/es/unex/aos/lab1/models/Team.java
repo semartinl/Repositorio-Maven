@@ -1,8 +1,13 @@
 package es.unex.aos.lab1.models;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Team {
@@ -13,7 +18,9 @@ public class Team {
     private String name;
     private String location;
 
-
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "teamId")
+    private Set<Player> players;
     public Team(String string, String string2) {
     }
     public Team() {
